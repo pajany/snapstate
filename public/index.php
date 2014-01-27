@@ -78,7 +78,7 @@ function getAppID() {
 		$resultArray	= $cursor->getNext();
 	}
 	$appID	= '';
-	if(is_array($resultArray) && count($resultArray) > 0) {
+	if(isset($resultArray) && is_array($resultArray) && count($resultArray) > 0) {
 		$appID	= $resultArray['fb_app_id'];
 	}
 	return $appID;
